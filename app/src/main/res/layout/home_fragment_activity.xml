@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragmentContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backfood">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardid"
+        android:layout_width="285dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="6dp"
+        app:cardMaxElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profileTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="PROFILE"
+                android:textSize="40sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/displayname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/balanceCredits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textSize="18sp"></TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardid2"
+        android:layout_width="285dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="6dp"
+        app:cardMaxElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cardid">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/balanceCredits">
+
+            <Button
+
+                android:id="@+id/breakfastButton"
+                style="@android:style/Widget.Material.Light.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="bfIntent"
+                android:text="BreakFast"></Button>
+
+            <Button
+                android:id="@+id/lunchButton"
+                style="@android:style/Widget.Material.Light.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="lnIntent"
+                android:text="Lunch"></Button>
+
+            <Button
+                android:id="@+id/dinnerButton"
+                style="@android:style/Widget.Material.Light.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="dnIntent"
+                android:text="Dinner"></Button>
+
+            <Button
+                android:id="@+id/GoToAdminButton"
+                style="@android:style/Widget.Material.Light.Button.Inset"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="addIntent"
+                android:text="Add Items"></Button>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
